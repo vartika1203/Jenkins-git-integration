@@ -8,6 +8,7 @@ pipeline {
         }
         stage('Build Code') {
             steps {
+                sh "chmod u+x HelloWorld.java" 
                 sh "javac HelloWorld.java"
                 sh "java HelloWorld"
             }

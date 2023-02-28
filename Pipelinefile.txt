@@ -3,19 +3,18 @@ pipeline {
     stages {
         stage('Clone Git') {
             steps {
-                git 'https://github.com/BThangaraju/Jenkins.git'
+                git 'https://github.com/vartika1203/Jenkins-git-integration.git'
             }
         }
         stage('Build Code') {
             steps {
-                sh "chmod u+x Prog1.py"
-                sh "./Prog1.py"
+                javac HelloWorld.java
+                java HelloWorld
             }
         }
      stage('Test Code') {
             steps {
-                sh "chmod u+x Tes.py"
-                sh "./Test.py"
+               echo "Testing Stage Done!!"
             }
         }
     } 

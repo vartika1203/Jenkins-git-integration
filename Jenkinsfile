@@ -8,8 +8,8 @@ pipeline {
         }
         stage('Build Code') {
             steps {
-                javac HelloWorld.java
-                java HelloWorld
+                javac "HelloWorld.java"
+                java "HelloWorld"
             }
         }
      stage('Test Code') {
